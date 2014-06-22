@@ -23,12 +23,17 @@ var CodespeakGenerator = yeoman.generators.Base.extend({
     // Have Yeoman greet the user.
     this.log(yosay('Welcome to the marvelous Codespeak generator!'));
 
-    var prompts = [{
-      type: 'confirm',
-      name: 'someOption',
-      message: 'Would you like to enable this option?',
-      default: true
-    }];
+    var prompts = [
+      {
+        name: 'projectName',
+        message: 'What is the name of your repo?',
+        default: 'codespeak'
+      },
+      {
+        name: 'description',
+        message: ''
+      }
+    ];
 
     this.prompt(prompts, function (props) {
       this.someOption = props.someOption;
@@ -38,11 +43,37 @@ var CodespeakGenerator = yeoman.generators.Base.extend({
   },
 
   app: function () {
-    this.mkdir('app');
-    this.mkdir('app/templates');
+    this.mkdir('_layouts');
+    this.mkdir('images');
+    this.mkdir('javascripts');
+    this.mkdir('stylesheets');
 
     this.copy('_package.json', 'package.json');
     this.copy('_bower.json', 'bower.json');
+    this.copy('_config.yml', 'config.yml');
+    this.copy('_Gruntfile.js', 'Gruntfile.js');
+    this.copy('Gemfile', 'Gemfile');
+    this.copy('_README.md', 'README.md');
+
+    this.copy('index.html', 'index.html');
+    this.copy('humans.txt', 'humans.txt');
+
+    this.copy('_layouts/default.html', '_layouts/default.html');
+    this.copy('_layouts/post.html', '_layouts/post.html');
+
+    this.copy('images/bethany-nowviskie.jpg', 'images/bethany-nowviskie.jpg');
+    this.copy('images/eric-rochester.jpg', 'images/eric-rochester.jpg');
+    this.copy('images/jeremy-boggs.jpg', 'images/jeremy-boggs.jpg');
+    this.copy('images/scott-bailey.jpg', 'images/scott-bailey.jpg');
+    this.copy('images/sic-logo.png', 'images/sic-logo.png');
+    this.copy('images/wayne-graham.jpg', 'images/wayne-graham.jpg');
+
+    this.copy('javascripts/jquery.min.js', 'javascripts/jquery.min.js');
+    this.copy('javascripts/modernizr.min.js', 'javascripts/modernizr.min.js');
+    this.copy('javascripts/respond.min.js', 'javascripts/respond.min.js');
+
+    this.copy('stylesheets/style.scss', 'stylesheets/style.scss');
+
   },
 
   projectfiles: function () {
