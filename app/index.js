@@ -23,17 +23,20 @@ var CodespeakGenerator = yeoman.generators.Base.extend({
     // Have Yeoman greet the user.
     this.log(yosay('Welcome to the marvelous Codespeak generator!'));
 
-    var prompts = [
-      {
-        name: 'projectName',
-        message: 'What is the name of your repo?',
-        default: 'codespeak'
-      },
-      {
-        name: 'description',
-        message: ''
-      }
-    ];
+    var prompts = [];
+
+    //var prompts = [
+      //{
+        //name: 'projectName',
+        //message: 'What is the name of your project?',
+        //default: 'codespeak'
+      //},
+      //{
+        //name: 'description',
+        //message: 'Give a brief description of the project',
+        //default: 'Part of the #codespeak revolution'
+      //}
+    //];
 
     this.prompt(prompts, function (props) {
       this.someOption = props.someOption;

@@ -3,14 +3,6 @@
 module.exports = function(grunt) {
 
   grunt.initConfig({
-    compass: {
-      all: {
-        config: 'config.rb'
-      },
-      options: {
-        bundleExec: true
-      }
-    },
     connect: {
       options: {
         middleware: function (connect) {
@@ -56,15 +48,8 @@ module.exports = function(grunt) {
     },
     watch: {
       jekyll: {
-        files: ['**/*.html', '**/*.md', '!README.md', '!_site/**/*', '**/*.css'],
+        files: ['**/*.html', '**/*.md', '!README.md', '!_site/**/*', 'stylesheets/*.scss'],
         tasks: ['exec:build'],
-        options: {
-          livereload: true
-        }
-      },
-      scss: {
-        files: ['scss/**/*.scss'],
-        tasks: ['compass', 'copy:css'],
         options: {
           livereload: true
         }
@@ -77,30 +62,22 @@ module.exports = function(grunt) {
         }
       },
       images: {
-        files: ['img/**/*'],
+        files: ['images/**/*'],
         tasks: ['copy:img'],
         options: {
           livereload: true
         }
       },
-      fonts: {
-        files: ['fonts/**/*'],
-        tasks: ['copy:fonts'],
-        options: {
-          livereload: true
-        }
-      }
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-exec');
 
-  grunt.registerTask('default', ['connect', 'compass', 'exec:build', 'watch']);
-  grunt.registerTask('anvil', ['compass', 'exec:build', 'watch']);
+  grunt.registerTask('default', ['connect', 'exec:build', 'watch']);
+  grunt.registerTask('anvil', ['exec:build', 'watch']);
   grunt.registerTask('serve', ['default']);
 
 };

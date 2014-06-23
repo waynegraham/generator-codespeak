@@ -1,5 +1,5 @@
 {
-  "name": "<%= _.slugify(projectName) %>",
+  "name": "codespeak",
   "version": "0.0.1",
   "dependencies": {
     "grunt-contrib-watch": "*",
