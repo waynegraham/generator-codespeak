@@ -1,15 +1,14 @@
 {
   "name": "generator-codespeak",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Yeoman generator",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "waynegraham/generator-codespeak",
-  "author": {
-    "name": "Wayne Graham",
-    "email": "wayne.graham@virginia.edu",
-    "url": "https://github.com/waynegraham"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/waynegraham/generator-codespeak"
   },
+  "author": "Wayne Graham <wayne.graham@virginia.edu> (https://github.com/waynegraham)",
   "engines": {
     "node": ">=0.10.0"
   },
@@ -32,5 +31,12 @@
   },
   "peerDependencies": {
     "yo": ">=1.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/waynegraham/generator-codespeak/issues"
+  },
+  "homepage": "https://github.com/waynegraham/generator-codespeak",
+  "directories": {
+    "test": "test"
   }
 }
