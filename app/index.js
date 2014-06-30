@@ -58,6 +58,11 @@ var CodespeakGenerator = yeoman.generators.Base.extend({
     this.copy('Gemfile', 'Gemfile');
     this.copy('_README.md', 'README.md');
 
+    this.copy('bibliography.md', 'bibliography.md');
+    this.copy('logistics.md', 'logistics.md');
+    this.copy('planning.md', 'planning.md');
+    this.copy('schedule.md', 'schedule.md');
+
     this.copy('index.html', 'index.html');
     this.copy('humans.txt', 'humans.txt');
 
