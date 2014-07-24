@@ -21,7 +21,7 @@ specialness of that opportunity, the focus of the meeting diverged from
 code critique and conversation about tacit knowledge transmission in the
 act of software development. Participants instead spent the most of the
 two days identifying and discussing ways to dismantle social barriers,
-both explicit and implicit, spoken and tacit -- barriers to access to
+both explicit and implicit, spoken and tacit — barriers to access to
 digital humanities communities and conversations, and internal barriers
 dividing the DH community. These might range from  knowledge acquisition
 required to perform technical work, to the way the field's structures of
@@ -30,6 +30,13 @@ scholars rather than all members of digital humanities teams.
 Participants also examined the working conditions, social and power
 structures, and (lack of) diversity found in technical environments in
 general and in DH work in particular.
+
+## Additional Materials
+
+* [Planning](planning.md)
+* [Logistics](logistics.md)
+* [Schedule](schedule.md)
+* [Bibliography](bibliography.md)
 
 ## Instructions
 
@@ -62,10 +69,17 @@ well. Simply install the `codespeak` generator from `npm` and then run
 the generator.
 
 ```shell
-$ npm install yo generator-codespeak
+$ npm install -g yo generator-codespeak
 $ yo codespeak
-$ grunt
 ```
+
+Once installed, you can preview changes to the content with the built in
+web server that ships with `jekyll`.
+
+```shell
+$ jekyll serve --watch
+```
+
 
 The scaffolding will take care of installing dependencies and setting up
 a development environment. When you're ready to deploy to github, simply
@@ -82,11 +96,12 @@ project directory named `CNAME` that contains the domain name you
 registered and push it to your `gh-pages` branch.
 
 ```shell
-$ cat "custom.domain.org" >> CNAME
+$ echo "custom.domain.org" >> CNAME
 $ git add CNAME
 $ git commit -m "Add custom domain"
 $ git push origin gh-pages
 ```
+
 In your DNS settings, create a CNAME entry that points to the github
 pages. For more detailed instructions, see [Tips for configuring a CNAME
 record with your DNS provider][gh-pages-dns].
@@ -94,7 +109,7 @@ record with your DNS provider][gh-pages-dns].
 ## What happens next?
 
 Discussions at [Speaking in Code][codespeak] were challenging,
-thought-provoking, open, heartfelt, and compelling -- and we want to
+thought-provoking, open, heartfelt, and compelling — and we want to
 share. We put together this kit to amplify voices, to continue
 conversations, and to enable more DH and digital library software
 developers and members of our larger digital humanities community to
@@ -103,9 +118,9 @@ join in.
 This kit is your key to hosting conversations of your own.
 
 But there are no step-by-step instructions. In fact, your Speaking in
-Code will -- and should! -- look different from the one held in November
+Code will — and should! — look different from the one held in November
 2013. This is a loose set of suggestions, priorities, and practices to
-      encourage the type of discussion that the Scholars' Lab attendees
+encourage the type of discussion that the Scholars' Lab attendees
 found transformative. Nevertheless it will be *your* Speaking in Code.
 It will grow out of your context and address the concerns of your
 participants.
@@ -124,11 +139,11 @@ committed to continuing the discussion online:
 * [#speakingincode][irc] (IRC)
 
 Use the hashtag on Twitter or join the Speaking in Code IRC channel to
-bring new voices into the mix -- and to call on the experience and
+bring new voices into the mix — and to call on the experience and
 goodwill of participants and organizers from the inaugural event.
 
-
 ## Additional Materials
+
 * [Planning](planning.md)
 * [Logistics](logistics.md)
 * [Schedule](schedule.md)
@@ -140,7 +155,7 @@ goodwill of participants and organizers from the inaugural event.
 [uva]: http://www.virginia.edu/
 [uva-lib]: http://www.library.virginia.edu/
 [twitter]: https://twitter.com/search?q=%23codespeak
-[irc]: http://webchat.freenode.net/?channels=%23codespeak&uio=d4
+[irc]: http://webchat.freenode.net/?channels=%23speakingincode&uio=d4
 [fork]: https://help.github.com/articles/fork-a-repo#step-1-fork-the-spoon-knife-repository
 [clone]: https://help.github.com/articles/fork-a-repo#step-2-clone-your-fork
 [jekyll]: http://jekyllrb.com/
@@ -149,3 +164,4 @@ goodwill of participants and organizers from the inaugural event.
 [pages]: https://pages.github.com/
 [gh-pages]: https://help.github.com/articles/creating-project-pages-manually
 [gh-pages-dns]: https://help.github.com/articles/tips-for-configuring-a-cname-record-with-your-dns-provider
+
